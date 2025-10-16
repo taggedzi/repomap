@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.dist/
+.venv/
+venv/
+build/
+dist/
+
+# IDEs
+.vscode/
+.idea/
+
+# Local index artifacts
+.continue/
+.repomap-venv/
+assets/

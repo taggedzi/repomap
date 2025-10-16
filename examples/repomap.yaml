@@ -1,0 +1,10 @@
+name: repomap
+version: 0.1.0
+schema: v1
+mcpServers:
+  - name: repomap
+    command: python
+    args:
+      - "-m"
+      - "repomap.mcp_server"
+    env: {}

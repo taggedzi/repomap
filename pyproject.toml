@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "repomap"
+version = "0.3.0"
+description = "Repo indexer with BM25, optional Ollama hybrid, per-repo TOML config, and MCP server."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name="Matthew Craig", email="taggedzi.mpc@gmail.com"}]
+license = {text = "MIT"}
+dependencies = [
+  "rank-bm25>=0.2.2",
+  "rapidfuzz>=3.9.0",
+  "tiktoken>=0.7.0",
+  "requests>=2.31.0",
+  "mcp>=1.0.0",
+  "tomli; python_version < '3.11'",
+]
+
+[project.scripts]
+repomap-index = "repomap.indexer:cli"
+repomap-query = "repomap.query:cli"
+repomap-mcp = "repomap.mcp_server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["repomap"]

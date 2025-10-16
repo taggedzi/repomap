@@ -1,0 +1,12 @@
+chunk_lines = 140
+exclude_dirs = [".git","node_modules",".venv","dist","build",".next",".cache"]
+text_ext = [".py",".ts",".tsx",".js",".jsx",".md",".yaml",".yml",".toml",".sql",".php",".html",".css",".scss"]
+
+[ollama]
+enabled = true
+url = "http://127.0.0.1:11434"
+model = "nomic-embed-text"
+timeout = 10.0
+batch = 32
+weight_bm25 = 0.55
+weight_emb  = 0.45
